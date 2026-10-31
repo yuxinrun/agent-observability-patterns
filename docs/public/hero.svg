@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 470" width="640" height="470" role="img" aria-label="Agent trace waterfall and metrics board">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fffdf8"/>
+      <stop offset="1" stop-color="#f1ece1"/>
+    </linearGradient>
+    <linearGradient id="barA" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0a958a"/>
+      <stop offset="1" stop-color="#4fd3c4"/>
+    </linearGradient>
+    <linearGradient id="barB" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2f5fc8"/>
+      <stop offset="1" stop-color="#7ba1ff"/>
+    </linearGradient>
+    <linearGradient id="barC" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#d94a27"/>
+      <stop offset="1" stop-color="#ff9b7e"/>
+    </linearGradient>
+    <linearGradient id="spark" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#0a958a" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#0a958a" stop-opacity="0.02"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="12" y="10" width="616" height="450" rx="26" fill="url(#bg)" stroke="#0e201c" stroke-opacity="0.12"/>
+  <rect x="12" y="10" width="616" height="58" rx="26" fill="#0c1b18"/>
+  <rect x="12" y="44" width="616" height="24" fill="#0c1b18"/>
+  <circle cx="42" cy="39" r="5" fill="#ff7c5e"/>
+  <circle cx="60" cy="39" r="5" fill="#ffd166"/>
+  <circle cx="78" cy="39" r="5" fill="#35d8c4"/>
+  <text x="104" y="44" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="13" fill="#b4c9c1">trace 4f9c…a12b · support-agent · acme</text>
+  <rect x="470" y="26" width="66" height="26" rx="13" fill="#0a958a"/>
+  <text x="503" y="44" text-anchor="middle" font-family="ui-monospace, monospace" font-size="11" fill="#042e2a">tracing</text>
+  <rect x="546" y="26" width="56" height="26" rx="13" fill="none" stroke="#35d8c4" stroke-opacity="0.5"/>
+  <text x="574" y="44" text-anchor="middle" font-family="ui-monospace, monospace" font-size="11" fill="#35d8c4">live</text>
+
+  <text x="38" y="104" font-family="ui-monospace, monospace" font-size="11" fill="#687a75" letter-spacing="1.6">SPAN WATERFALL</text>
+
+  <g font-family="ui-monospace, monospace">
+    <rect x="38" y="118" width="360" height="40" rx="9" fill="#e9f5f2" stroke="#0a958a" stroke-opacity="0.25"/>
+    <text x="52" y="136" font-size="11" fill="#0e201c">invoke_agent</text>
+    <text x="52" y="150" font-size="9" fill="#687a75">6.4s · 3 turns</text>
+    <rect x="228" y="130" width="158" height="8" rx="4" fill="url(#barA)"/>
+
+    <rect x="56" y="166" width="342" height="38" rx="9" fill="#eef2fb" stroke="#2f5fc8" stroke-opacity="0.22"/>
+    <text x="70" y="183" font-size="10.5" fill="#0e201c">chat · turn 1</text>
+    <text x="70" y="196" font-size="9" fill="#687a75">in 812 / out 96 tok</text>
+    <rect x="238" y="177" width="66" height="7" rx="3.5" fill="url(#barB)"/>
+
+    <rect x="74" y="212" width="324" height="36" rx="9" fill="#eef7ea" stroke="#7d9a19" stroke-opacity="0.3"/>
+    <text x="88" y="228" font-size="10.5" fill="#0e201c">execute_tool search_orders</text>
+    <text x="88" y="241" font-size="9" fill="#687a75">200 OK · 420ms</text>
+    <rect x="286" y="222" width="26" height="7" rx="3.5" fill="#7d9a19"/>
+
+    <rect x="56" y="256" width="342" height="38" rx="9" fill="#eef2fb" stroke="#2f5fc8" stroke-opacity="0.22"/>
+    <text x="70" y="273" font-size="10.5" fill="#0e201c">chat · turn 2</text>
+    <text x="70" y="286" font-size="9" fill="#687a75">in 1,204 / out 210 tok</text>
+    <rect x="238" y="267" width="102" height="7" rx="3.5" fill="url(#barB)"/>
+
+    <rect x="74" y="302" width="324" height="36" rx="9" fill="#fdeee9" stroke="#d94a27" stroke-opacity="0.3"/>
+    <text x="88" y="318" font-size="10.5" fill="#0e201c">execute_tool refund_quote</text>
+    <text x="88" y="331" font-size="9" fill="#d94a27">retry 1 · 2.0s</text>
+    <rect x="300" y="312" width="42" height="7" rx="3.5" fill="url(#barC)"/>
+  </g>
+
+  <text x="38" y="372" font-family="ui-monospace, monospace" font-size="11" fill="#687a75" letter-spacing="1.6">LIVE METRICS</text>
+  <g>
+    <rect x="38" y="384" width="118" height="56" rx="11" fill="#fffdf8" stroke="#0e201c" stroke-opacity="0.12"/>
+    <text x="52" y="404" font-family="ui-monospace, monospace" font-size="9.5" fill="#687a75">SUCCESS</text>
+    <text x="52" y="429" font-family="ui-monospace, monospace" font-size="20" fill="#0a958a">99.2%</text>
+
+    <rect x="166" y="384" width="118" height="56" rx="11" fill="#fffdf8" stroke="#0e201c" stroke-opacity="0.12"/>
+    <text x="180" y="404" font-family="ui-monospace, monospace" font-size="9.5" fill="#687a75">P95 LATENCY</text>
+    <text x="180" y="429" font-family="ui-monospace, monospace" font-size="20" fill="#2f5fc8">2.1s</text>
+
+    <rect x="294" y="384" width="118" height="56" rx="11" fill="#fffdf8" stroke="#0e201c" stroke-opacity="0.12"/>
+    <text x="308" y="404" font-family="ui-monospace, monospace" font-size="9.5" fill="#687a75">COST / TASK</text>
+    <text x="308" y="429" font-family="ui-monospace, monospace" font-size="20" fill="#d94a27">$0.021</text>
+  </g>
+
+  <g transform="translate(432 96)">
+    <rect x="0" y="0" width="166" height="132" rx="13" fill="#0c1b18"/>
+    <text x="16" y="24" font-family="ui-monospace, monospace" font-size="9.5" fill="#80968f" letter-spacing="1.2">TOKENS / MIN</text>
+    <path d="M16 58 L34 48 L52 62 L70 40 L88 52 L106 34 L124 46 L142 30" fill="none" stroke="#35d8c4" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M16 58 L34 48 L52 62 L70 40 L88 52 L106 34 L124 46 L142 30 L142 104 L16 104 Z" fill="url(#spark)"/>
+    <text x="16" y="122" font-family="ui-monospace, monospace" font-size="9" fill="#80968f">peak 41k · loop detected</text>
+  </g>
+
+  <g transform="translate(432 242)">
+    <rect x="0" y="0" width="166" height="104" rx="13" fill="#fffdf8" stroke="#0e201c" stroke-opacity="0.12"/>
+    <text x="16" y="24" font-family="ui-monospace, monospace" font-size="9.5" fill="#687a75" letter-spacing="1.2">TURN SPREAD</text>
+    <g fill="#0a958a">
+      <rect x="16" y="70" width="12" height="14" rx="3"/>
+      <rect x="34" y="56" width="12" height="28" rx="3"/>
+      <rect x="52" y="44" width="12" height="40" rx="3"/>
+      <rect x="70" y="64" width="12" height="20" rx="3"/>
+    </g>
+    <g fill="#d94a27">
+      <rect x="88" y="76" width="12" height="8" rx="3"/>
+      <rect x="106" y="82" width="12" height="2" rx="1"/>
+    </g>
+    <text x="16" y="98" font-family="ui-monospace, monospace" font-size="8.5" fill="#687a75">1-3 turns  |  15+ warn</text>
+  </g>
+
+  <g transform="translate(432 362)">
+    <rect x="0" y="0" width="166" height="78" rx="13" fill="#fffdf8" stroke="#0e201c" stroke-opacity="0.12"/>
+    <circle cx="24" cy="24" r="8" fill="#d94a27"/>
+    <text x="42" y="28" font-family="ui-monospace, monospace" font-size="9.5" fill="#0e201c">P1 tool errors</text>
+    <text x="16" y="50" font-family="ui-monospace, monospace" font-size="9" fill="#687a75">search_docs 20.4%</text>
+    <rect x="16" y="60" width="134" height="7" rx="3.5" fill="#f1ece1"/>
+    <rect x="16" y="60" width="88" height="7" rx="3.5" fill="#ff7c5e"/>
+  </g>
+</svg>
